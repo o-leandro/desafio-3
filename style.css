@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores */
+    --purple: #6C63FF;
+    --purple-light: #D7D4FF;
+    --white: #FFF;
+    --white-200: #F9F9F9;
+    --gray: #555555;
+    --gary--dark: #2A2A2A;
+
+    /* Tipografia */
+    --merriweather: 'Merriweather', serif;
+    --lato: 'Lato', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: var(--purple-light);
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 560px;
+    width: 100%;
+}
+
+.home__title {
+    color: var(--gary--dark);
+    font-size: 36px;
+    font-family: var(--merriweather);
+    font-weight: 400;
+    width: 60%;
+}
+
+.home__description {
+    color: var(--gray);
+    font-size: 19px;
+    font-family: var(--lato);
+    font-weight: 400;
+    margin: 18px 0 45px 0;
+    width: 60%;
+}
+
+.home__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-family: var(--lato);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.home__btn:hover {
+    transform: scale(1.1);
+}
+
+.home__img img {
+    width: 450px;
+    height: 377px;
+}
+
+.cards {
+    background-color: var(--white-200);
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 0;
+}
+
+.card__item {
+    width: 320px;
+    height: 423px;
+    background-color: var(--white);
+}
+
+.card__img {
+    width: 320px;
+}
+
+.card__title {
+    font-size: 24px;
+    color: var(--gary--dark);
+    font-family: var(--merriweather);
+    font-weight: 700;
+    margin: 24px 0 26px 30px;
+}
+
+.card__description {
+    font-size: 18px;
+    color: var(--gray);
+    font-family: var(--lato);
+    font-weight: 400;
+    width: 80%;
+}
+
+.card__title, .card__description {
+    margin-left: 30px;
+}
+
+.contact__title {
+    text-align: center;
+    font-size: 32px;
+    font-family: var(--merriweather);
+    font-weight: 400;
+    margin: 85px 0 60px 0;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input, button {
+    width: 470px;
+    height: 65px;
+}
+
+input, textarea::placeholder {
+    font-size: 18px;
+    font-family: var(--lato);
+    padding-left: 15px;
+}
+
+textarea {
+    padding-top: 21px;
+}
+
+button {
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--lato);
+    font-weight: 700;
+    border: none;
+    margin: 30px 0 80px 0;
+    transition: .4s;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--purple);
+    background-color: var(--white);
+    border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+        max-width: 940px;
+    }
+
+    .card__item {
+        width: 260px;
+    } 
+
+    .card__img {
+        width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 20px 0 20px;
+        margin: 0 auto;
+    }
+    
+    .home__title {
+        width: 100%;
+    }
+
+    .home__description {
+        width: 100%;
+    }
+
+    .home__img img {
+        width: 330px;
+    }
+}
+
+@media (max-width: 426px) {
+    .wrapper {
+        padding: 0 20px 0 20px;
+        margin: 0 auto;
+    }
+
+    .home {
+        flex-direction: column;
+        width: 100%;
+        height: 720px;
+    }
+
+    .home__title {
+        width: 100%;
+        font-size: 2rem;
+        padding: 55px 0 18px 0;
+    }
+
+    .home__description {
+        margin: 0;
+        width: 100%;
+        padding-bottom: 32px;
+    }
+
+    .home__img img {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .card {
+        padding: 75px 0;
+        justify-content: center;
+    }
+
+    form {
+        gap: 20px;
+    }
+    
+    input, button {
+        width: 100%;
+        height: 60px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+    }
+    
+    input, textarea::placeholder {
+        font-size: 18px;
+        font-family: var(--lato);
+        padding-left: 15px;
+    }
+    
+    textarea {
+        padding-top: 21px;
+    }
+    
+    button {
+        background-color: var(--purple);
+        color: var(--white);
+        font-size: 20px;
+        font-family: var(--lato);
+        font-weight: 700;
+        border: none;
+        margin: 30px 0 80px 0;
+    }
+}
